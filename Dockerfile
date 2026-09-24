@@ -4,7 +4,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 
 RUN sed -i 's/port="8080"/port="9090"/' /usr/local/tomcat/conf/server.xml
 
-COPY target/UserRegistration.war /usr/local/tomcat/webapps/ROOT.war
+ADD target/UserRegistration.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 9090
 
